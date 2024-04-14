@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './index.css'
+const BannerCardItem=(props)=>{
+    const{bannerDetails}=props;
+    const{headerText,description,className}=bannerDetails;
+    return(
+        <li className={`${className}banner-card`} >
+            <div>
+                <h1 className="heading">{headerText}</h1>
+                <p className="p">{description}</p>
+                <button className="button" type="button">Show More</button>
+            </div>
+        </li>
+    );
+};  
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+export default BannerCardItem;
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
